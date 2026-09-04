@@ -211,8 +211,6 @@ main {
   line-height: 1.4;
 }
 
-/* 飯店名稱 Google Maps 連結 */
-
 .hotel-link,
 .hotel-link:link,
 .hotel-link:visited {
@@ -234,6 +232,20 @@ main {
 .hotel-location {
   color: #91a2be !important;
   font-size: 14px;
+}
+
+.place-link {
+  color: #ff925c;
+  text-decoration: none;
+}
+
+.place-link:hover {
+  color: #ffb28c;
+  text-decoration: underline;
+}
+
+.place-link:active {
+  opacity: 0.7;
 }
 
 
@@ -585,41 +597,69 @@ main {
   </div>
 
 
+<div class="card">
+  <div class="time">10:00 — 11:00</div>
+
+  <h3>
+    ☕
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=Greenwell+Farms+Hawaii"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="place-link"
+    >
+      Greenwell Farms
+    </a>
+  </h3>
+
+  <p>
+    09:20 飯店出發 (建議於導覽前10-15分鐘抵達)
+  </p>
+
+  <p>
+   活動內容：包含農場歷史、種植與咖啡豆加工過程解說，以及免費品嚐 100% 的 Kona 咖啡。
+  </p>
+
+  <span class="confirmed">
+      ✅ 免費導覽 無需預約
+  </span>
+
+</div>
+
+
   <div class="card">
 
-    <h3>☕ Greenwell Farms</h3>
+  <div class="time">17:30 — 19:30</div>
 
-    <p>
-      參觀 Kona 咖啡農場。
-    </p>
+  <h3>
+    🌊
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=74-380+Kealakehe+Pkwy,+Kailua-Kona,+HI+96740,+USA"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="place-link"
+    >
+    Manta Ray Night Snorkel
+    </a>
+  </h3>
 
-  </div>
+  <p>
+    夕陽魔鬼魚浮潛
+  </p>
 
+  <p>
+    🧥 <strong>防寒衣：</strong>需另外租借
+  </p>
 
-  <div class="card">
+  <p class="note">
+    旁邊有小停車場
+  </p>
 
-    <h3>🌴 Kona 下午自由活動</h3>
+  <span class="confirmed">
+    ✅ Klook
+  </span>
 
-    <p>
-      海邊、逛街、吃飯、休息。
-    </p>
-
-  </div>
-
-
-  <div class="card">
-
-    <h3>🌊 Manta Ray Night Snorkel</h3>
-
-    <p>
-      晚上參加魔鬼魚夜間浮潛。
-    </p>
-
-    <span class="maybe">
-      活動尚未確認
-    </span>
-
-  </div>
+</div>
 
 
 <div class="card hotel">
