@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hawaii Graduation Trip 🌺</title>
+<title>Hawaii Graduation Trip </title>
 
 <style>
 * {
@@ -160,6 +160,43 @@ main {
   border-left: 4px solid #4b9cff;
 }
 
+.hotel-image {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.hotel-name {
+  margin-bottom: 6px;
+}
+
+.hotel-location {
+  color: #91a2be !important;
+  font-size: 14px;
+}
+
+.map-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 10px 15px;
+  background: #263d67;
+  border: 1px solid #3d5e91;
+  border-radius: 12px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.map-button:hover {
+  background: #315184;
+}
+
 .flight {
   border-left: 4px solid #ff8447;
 }
@@ -222,10 +259,10 @@ main {
 <body>
 
 <header>
-  <h1>🌺 Hawaii Graduation Trip</h1>
-  <p>12/14 — 12/22・Big Island + Oahu</p>
+  <h1>Hawaii Graduation Trip</h1>
+  <p>12/14 — 12/22 Big Island + Oahu</p>
   <div class="trip-route">
-    LAX ✈️ Kona → Hilo ✈️ Honolulu → Waikiki ✈️ LAX
+    Irvine → Kona → Hilo → Honolulu → LAX
   </div>
 </header>
 
@@ -245,46 +282,64 @@ main {
 
 <!-- 12/14 -->
 <section class="day active">
-  <div class="day-title"><strong>12/14</strong> 星期一</div>
+  <div class="day-title"><strong>12/14 (一)</strong> </div>
 
   <div class="card flight">
-    <div class="time">12:55 — 16:41</div>
     <h3>✈️ LAX → KOA</h3>
+    <div class="time">12:55 — 16:41</div>
 
     <div class="flight-detail">
       <p><strong>航空公司：</strong>American Airlines 美國航空</p>
       <p><strong>航班：</strong>AA059</p>
       <p><strong>出發：</strong>12:55｜LAX 洛杉磯國際機場</p>
       <p><strong>抵達：</strong>16:41｜KOA 科納國際機場</p>
-      <p><strong>艙等：</strong>經濟艙</p>
-      <p><strong>機型：</strong>Airbus A321neo</p>
     </div>
-
-    <p class="route">
-      LAX → KOA → 取車 → Kona → 飯店
-    </p>
-
-    <span class="confirmed">✅ 機票已訂</span>
   </div>
 
-  <div class="card hotel">
-    <h3>🏨 Courtyard by Marriott King Kamehameha's Kona Beach Hotel</h3>
+<div class="card hotel">
 
-    <p><strong>住宿日期：</strong>12/14 — 12/16</p>
-    <p><strong>最早 Check-in：</strong>15:00</p>
+  <img
+    class="hotel-image"
+    src="kona-hotel.jpg"
+    alt="Courtyard by Marriott King Kamehameha's Kona Beach Hotel"
+  >
 
-    <div class="payment">
-      <p><strong>💳 線上支付：</strong>TWD 22,743</p>
-      <p class="note">第一筆 TWD 11,523 + 第二筆 TWD 11,220</p>
-      <p><strong>🏨 現場付款：</strong>無</p>
-    </div>
+  <h3 class="hotel-name">
+    🏨 Courtyard by Marriott King Kamehameha's Kona Beach Hotel
+  </h3>
 
-    <div class="breakfast">
-      <p class="highlight">🍳 12/15 含飯店早餐</p>
-      <p class="note">
-        因兩晚分開訂房，兩筆價格統一放在 12/14 Check-in 當天顯示。
-      </p>
-    </div>
+  <p class="hotel-location">📍 Kailua-Kona, Big Island</p>
+
+  <a
+    class="map-button"
+    href="https://www.google.com/maps/search/?api=1&query=Courtyard+by+Marriott+King+Kamehamehas+Kona+Beach+Hotel"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    📍 Google Maps
+  </a>
+
+  <p><strong>住宿日期：</strong>12/14 — 12/16</p>
+  <p><strong>最早 Check-in：</strong>15:00</p>
+
+  <div class="payment">
+    <p><strong>💳 線上支付：</strong>TWD 22,743</p>
+    <p class="note">
+      第一筆 TWD 11,523 + 第二筆 TWD 11,220
+    </p>
+    <p><strong>🏨 現場付款：</strong>無</p>
+  </div>
+
+  <div class="breakfast">
+    <p class="highlight">🍳 12/15 含飯店早餐</p>
+    <p class="note">
+      因兩晚分開訂房，兩筆價格統一放在 12/14 Check-in 當天顯示。
+    </p>
+  </div>
+
+  <span class="confirmed">✅ 住宿已訂</span>
+
+</div>
 
     <span class="confirmed">✅ 住宿已訂</span>
   </div>
