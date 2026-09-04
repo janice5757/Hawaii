@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Hawaii Graduation Trip 🌺</title>
 
 <style>
+
 * {
   box-sizing: border-box;
 }
@@ -17,6 +22,11 @@ body {
   background: #0b1120;
   color: #f4f7ff;
 }
+
+
+/* =========================
+   HEADER
+========================= */
 
 header {
   padding: 38px 20px 24px;
@@ -41,6 +51,11 @@ header p {
   color: #b7c4dc;
   font-size: 15px;
 }
+
+
+/* =========================
+   DAY NAVIGATION
+========================= */
 
 .days {
   display: flex;
@@ -80,6 +95,11 @@ header p {
   color: white;
 }
 
+
+/* =========================
+   MAIN
+========================= */
+
 main {
   max-width: 820px;
   margin: auto;
@@ -102,6 +122,11 @@ main {
 .day-title strong {
   color: #ff8447;
 }
+
+
+/* =========================
+   CARDS
+========================= */
 
 .card {
   padding: 20px;
@@ -130,10 +155,15 @@ main {
   margin-bottom: 8px;
 }
 
+
+/* =========================
+   STATUS
+========================= */
+
 .confirmed {
   display: inline-block;
   padding: 5px 10px;
-  margin-top: 8px;
+  margin-top: 10px;
   background: #218b57;
   border-radius: 999px;
   color: white;
@@ -156,21 +186,49 @@ main {
   line-height: 1.8;
 }
 
+
+/* =========================
+   HOTEL
+========================= */
+
 .hotel {
   border-left: 4px solid #4b9cff;
+  overflow: hidden;
 }
 
 .hotel-image {
   width: 100%;
-  height: 210px;
+  height: 220px;
   object-fit: cover;
+  object-position: center;
   border-radius: 15px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   display: block;
 }
 
 .hotel-name {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+/* 飯店名稱 Google Maps 連結 */
+
+.hotel-link,
+.hotel-link:link,
+.hotel-link:visited {
+  color: #5eead4 !important;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.hotel-link:hover {
+  color: #99f6e4 !important;
+  text-decoration: underline;
+}
+
+.hotel-link:active {
+  color: #5eead4 !important;
+  opacity: 0.75;
 }
 
 .hotel-location {
@@ -178,39 +236,13 @@ main {
   font-size: 14px;
 }
 
-.hotel-link {
-  color: #ff925c;
-  text-decoration: none;
-}
 
-.hotel-link:hover {
-  text-decoration: underline;
-}
-
-.hotel-link:active {
-  opacity: 0.7;
-}
-
+/* =========================
+   FLIGHT
+========================= */
 
 .flight {
   border-left: 4px solid #ff8447;
-}
-
-.note {
-  color: #91a2be;
-  font-size: 14px;
-}
-
-.payment {
-  margin-top: 14px;
-  padding: 14px 16px;
-  background: #0f1728;
-  border: 1px solid #263650;
-  border-radius: 14px;
-}
-
-.payment p {
-  margin: 5px 0;
 }
 
 .flight-detail {
@@ -225,10 +257,27 @@ main {
   margin: 6px 0;
 }
 
-.highlight {
-  color: #ffbd78 !important;
-  font-weight: 700;
+
+/* =========================
+   PAYMENT
+========================= */
+
+.payment {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background: #0f1728;
+  border: 1px solid #263650;
+  border-radius: 14px;
 }
+
+.payment p {
+  margin: 5px 0;
+}
+
+
+/* =========================
+   BREAKFAST
+========================= */
 
 .breakfast {
   margin-top: 14px;
@@ -238,9 +287,29 @@ main {
   border-radius: 12px;
 }
 
+.highlight {
+  color: #ffbd78 !important;
+  font-weight: 700;
+}
+
+
+/* =========================
+   CHECKOUT
+========================= */
+
 .checkout {
   border-left: 4px solid #a56cff;
 }
+
+.note {
+  color: #91a2be;
+  font-size: 14px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 .footer {
   text-align: center;
@@ -248,42 +317,132 @@ main {
   font-size: 13px;
   margin-top: 40px;
 }
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  .day-title {
+    font-size: 26px;
+  }
+
+  .hotel-image {
+    height: 200px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
-  <h1>🌺 Hawaii Graduation Trip</h1>
-  <p>12/14 — 12/22・Big Island + Oahu</p>
+
+  <h1>Hawaii Graduation Trip 🌺</h1>
+
+  <p>
+    12/14 — 12/22 ・ Big Island + Oahu
+  </p>
 
   <div class="trip-route">
     Irvine → Kona → Hilo → Honolulu → LAX
   </div>
+
 </header>
 
+
+<!-- =========================
+     DAY BUTTONS
+========================= -->
+
 <nav class="days">
-  <button class="active" onclick="showDay(0)">12/14<span>Day 1</span></button>
-  <button onclick="showDay(1)">12/15<span>Day 2</span></button>
-  <button onclick="showDay(2)">12/16<span>Day 3</span></button>
-  <button onclick="showDay(3)">12/17<span>Day 4</span></button>
-  <button onclick="showDay(4)">12/18<span>Day 5</span></button>
-  <button onclick="showDay(5)">12/19<span>Day 6</span></button>
-  <button onclick="showDay(6)">12/20<span>Day 7</span></button>
-  <button onclick="showDay(7)">12/21<span>Day 8</span></button>
-  <button onclick="showDay(8)">12/22<span>Day 9</span></button>
+
+  <button class="active" onclick="showDay(0)">
+    12/14
+    <span>Day 1</span>
+  </button>
+
+  <button onclick="showDay(1)">
+    12/15
+    <span>Day 2</span>
+  </button>
+
+  <button onclick="showDay(2)">
+    12/16
+    <span>Day 3</span>
+  </button>
+
+  <button onclick="showDay(3)">
+    12/17
+    <span>Day 4</span>
+  </button>
+
+  <button onclick="showDay(4)">
+    12/18
+    <span>Day 5</span>
+  </button>
+
+  <button onclick="showDay(5)">
+    12/19
+    <span>Day 6</span>
+  </button>
+
+  <button onclick="showDay(6)">
+    12/20
+    <span>Day 7</span>
+  </button>
+
+  <button onclick="showDay(7)">
+    12/21
+    <span>Day 8</span>
+  </button>
+
+  <button onclick="showDay(8)">
+    12/22
+    <span>Day 9</span>
+  </button>
+
 </nav>
+
 
 <main>
 
-<!-- ==================== 12/14 ==================== -->
+
+<!-- ==================================================
+     DAY 1
+     12/14
+================================================== -->
+
 <section class="day active">
 
   <div class="day-title">
     <strong>12/14 (一)</strong>
   </div>
 
+
+  <!-- FLIGHT -->
+
   <div class="card flight">
+
     <h3>✈️ LAX → KOA</h3>
 
     <div class="time">
@@ -291,6 +450,7 @@ main {
     </div>
 
     <div class="flight-detail">
+
       <p>
         <strong>航空公司：</strong>
         American Airlines 美國航空
@@ -310,40 +470,54 @@ main {
         <strong>抵達：</strong>
         16:41｜KOA 科納國際機場
       </p>
+
     </div>
+
   </div>
 
 
+  <!-- KONA -->
+
   <div class="card">
+
     <h3>🌴 Kona</h3>
 
     <p>
       抵達後取車、前往飯店 Check-in，
       晚上可安排在海邊、市區享用晚餐與休息。
     </p>
+
   </div>
 
+
+  <!-- KONA HOTEL -->
 
   <div class="card hotel">
 
     <img
       class="hotel-image"
-      src="kona-hotel.jpg"
+      src="IMG_9042.jpeg"
       alt="Courtyard by Marriott King Kamehameha's Kona Beach Hotel"
     >
 
-<h3 class="hotel-name">
-  🏨
-  <a
-    href="https://www.google.com/maps/search/?api=1&query=Courtyard+by+Marriott+King+Kamehamehas+Kona+Beach+Hotel"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="hotel-link"
-  >
-    Courtyard by Marriott King Kamehameha's Kona Beach Hotel
-  </a>
-</h3>
+    <h3 class="hotel-name">
 
+      🏨
+
+      <a
+        class="hotel-link"
+        href="https://www.google.com/maps/search/?api=1&query=Courtyard+by+Marriott+King+Kamehamehas+Kona+Beach+Hotel"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Courtyard by Marriott King Kamehameha's Kona Beach Hotel
+      </a>
+
+    </h3>
+
+    <p class="hotel-location">
+      📍 Kailua-Kona, Big Island
+    </p>
 
     <p>
       <strong>住宿日期：</strong>
@@ -354,6 +528,7 @@ main {
       <strong>最早 Check-in：</strong>
       15:00
     </p>
+
 
     <div class="payment">
 
@@ -369,52 +544,71 @@ main {
 
     </div>
 
+
     <div class="breakfast">
+
       <p class="highlight">
         🍳 12/15 含飯店早餐
       </p>
+
     </div>
+
+    <span class="confirmed">
+      ✅ 住宿已訂
+    </span>
 
   </div>
 
 </section>
 
 
-<!-- ==================== 12/15 ==================== -->
+<!-- ==================================================
+     DAY 2
+     12/15
+================================================== -->
+
 <section class="day">
 
   <div class="day-title">
     <strong>12/15 (二)</strong>
   </div>
 
+
   <div class="card">
+
     <h3>🍳 飯店早餐</h3>
 
     <p>
       Courtyard by Marriott King Kamehameha's Kona Beach Hotel
     </p>
+
   </div>
 
 
   <div class="card">
+
     <h3>☕ Greenwell Farms</h3>
 
     <p>
       參觀 Kona 咖啡農場。
     </p>
+
   </div>
 
 
   <div class="card">
+
     <h3>🌴 Kona 下午自由活動</h3>
 
     <p>
       海邊、逛街、吃飯、休息。
     </p>
+
   </div>
 
 
   <div class="card">
+
     <h3>🌊 Manta Ray Night Snorkel</h3>
 
     <p>
@@ -424,27 +618,36 @@ main {
     <span class="maybe">
       活動尚未確認
     </span>
+
   </div>
 
 
   <div class="card hotel">
+
     <h3>🏨 住宿</h3>
 
     <p>
       Courtyard by Marriott King Kamehameha's Kona Beach Hotel
     </p>
+
   </div>
 
 </section>
 
 
-<!-- ==================== 12/16 ==================== -->
+<!-- ==================================================
+     DAY 3
+     12/16
+================================================== -->
+
 <section class="day">
 
   <div class="day-title">
     <strong>12/16 (三)</strong>
   </div>
 
+
+  <!-- CHECK OUT -->
 
   <div class="card checkout">
 
@@ -460,13 +663,10 @@ main {
       Courtyard by Marriott King Kamehameha's Kona Beach Hotel
     </p>
 
-    <p>
-      <strong>最晚退房時間：</strong>
-      11:00
-    </p>
-
   </div>
 
+
+  <!-- KONA MORNING -->
 
   <div class="card">
 
@@ -481,6 +681,8 @@ main {
   </div>
 
 
+  <!-- DRIVE TO HILO -->
+
   <div class="card">
 
     <h3>
@@ -488,31 +690,40 @@ main {
     </h3>
 
     <p>
-      前往 Hilo 飯店 Check-in。
+      從 Kona 前往 Hilo，抵達後先到飯店 Check-in。
     </p>
 
   </div>
 
 
+  <!-- HILO HOTEL -->
+
   <div class="card hotel">
 
     <img
       class="hotel-image"
-      src="hilo-hotel.jpg"
+      src="IMG_9043.jpeg"
       alt="Grand Naniloa Hotel, a DoubleTree by Hilton"
     >
 
-   <h3 class="hotel-name">
-  🏨
-  <a
-    href="https://www.google.com/maps/search/?api=1&query=Grand+Naniloa+Hotel+a+DoubleTree+by+Hilton"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="hotel-link"
-  >
-    Grand Naniloa Hotel, a DoubleTree by Hilton
-  </a>
-</h3>
+    <h3 class="hotel-name">
+
+      🏨
+
+      <a
+        class="hotel-link"
+        href="https://www.google.com/maps/search/?api=1&query=Grand+Naniloa+Hotel+a+DoubleTree+by+Hilton"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Grand Naniloa Hotel, a DoubleTree by Hilton
+      </a>
+
+    </h3>
+
+    <p class="hotel-location">
+      📍 Hilo, Big Island
+    </p>
 
     <p>
       <strong>住宿日期：</strong>
@@ -523,6 +734,7 @@ main {
       <strong>最早 Check-in：</strong>
       16:00
     </p>
+
 
     <div class="payment">
 
@@ -538,8 +750,14 @@ main {
 
     </div>
 
+    <span class="confirmed">
+      ✅ 住宿已訂
+    </span>
+
   </div>
 
+
+  <!-- MAUNA KEA -->
 
   <div class="card">
 
@@ -548,10 +766,10 @@ main {
     </h3>
 
     <p class="route">
-      Visitor Information Station →
-      Summit / Observatory →
-      🌅 4300 日落 →
-      ⭐ 2800 觀星
+      Visitor Information Station
+      → Summit / Observatory
+      → 🌅 4300 日落
+      → ⭐ 2800 觀星
     </p>
 
   </div>
@@ -559,7 +777,11 @@ main {
 </section>
 
 
-<!-- ==================== 12/17 ==================== -->
+<!-- ==================================================
+     DAY 4
+     12/17
+================================================== -->
+
 <section class="day">
 
   <div class="day-title">
@@ -595,13 +817,19 @@ main {
 </section>
 
 
-<!-- ==================== 12/18 ==================== -->
+<!-- ==================================================
+     DAY 5
+     12/18
+================================================== -->
+
 <section class="day">
 
   <div class="day-title">
     <strong>12/18 (五)</strong>
   </div>
 
+
+  <!-- HILO CHECK OUT -->
 
   <div class="card checkout">
 
@@ -617,13 +845,10 @@ main {
       Grand Naniloa Hotel, a DoubleTree by Hilton
     </p>
 
-    <p>
-      <strong>最晚退房時間：</strong>
-      11:00
-    </p>
-
   </div>
 
+
+  <!-- FLIGHT -->
 
   <div class="card flight">
 
@@ -662,25 +887,34 @@ main {
   </div>
 
 
+  <!-- WAIKIKI HOTEL -->
+
   <div class="card hotel">
 
     <img
       class="hotel-image"
-      src="waikiki-hotel.jpg"
+      src="IMG_9044.jpeg"
       alt="Hilton Hawaiian Village Waikiki Beach Resort"
     >
 
-<h3 class="hotel-name">
-  🏨
-  <a
-    href="https://www.google.com/maps/search/?api=1&query=Hilton+Hawaiian+Village+Waikiki+Beach+Resort"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="hotel-link"
-  >
-    Hilton Hawaiian Village Waikiki Beach Resort
-  </a>
-</h3>
+    <h3 class="hotel-name">
+
+      🏨
+
+      <a
+        class="hotel-link"
+        href="https://www.google.com/maps/search/?api=1&query=Hilton+Hawaiian+Village+Waikiki+Beach+Resort"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Hilton Hawaiian Village Waikiki Beach Resort
+      </a>
+
+    </h3>
+
+    <p class="hotel-location">
+      📍 Waikiki, Honolulu
+    </p>
 
     <p>
       <strong>住宿日期：</strong>
@@ -691,6 +925,7 @@ main {
       <strong>最早 Check-in：</strong>
       16:00
     </p>
+
 
     <div class="payment">
 
@@ -706,8 +941,12 @@ main {
 
     </div>
 
+ 
+
   </div>
 
+
+  <!-- BEACH -->
 
   <div class="card">
 
@@ -721,6 +960,8 @@ main {
 
   </div>
 
+
+  <!-- FIREWORKS -->
 
   <div class="card">
 
@@ -737,7 +978,11 @@ main {
 </section>
 
 
-<!-- ==================== 12/19 ==================== -->
+<!-- ==================================================
+     DAY 6
+     12/19
+================================================== -->
+
 <section class="day">
 
   <div class="day-title">
@@ -786,7 +1031,11 @@ main {
 </section>
 
 
-<!-- ==================== 12/20 ==================== -->
+<!-- ==================================================
+     DAY 7
+     12/20
+================================================== -->
+
 <section class="day">
 
   <div class="day-title">
@@ -822,7 +1071,11 @@ main {
 </section>
 
 
-<!-- ==================== 12/21 ==================== -->
+<!-- ==================================================
+     DAY 8
+     12/21
+================================================== -->
+
 <section class="day">
 
   <div class="day-title">
@@ -858,13 +1111,19 @@ main {
 </section>
 
 
-<!-- ==================== 12/22 ==================== -->
+<!-- ==================================================
+     DAY 9
+     12/22
+================================================== -->
+
 <section class="day">
 
   <div class="day-title">
     <strong>12/22 (二)</strong>
   </div>
 
+
+  <!-- CHECKOUT -->
 
   <div class="card checkout">
 
@@ -880,13 +1139,10 @@ main {
       Hilton Hawaiian Village Waikiki Beach Resort
     </p>
 
-    <p>
-      <strong>最晚退房時間：</strong>
-      11:00
-    </p>
-
   </div>
 
+
+  <!-- BREAKFAST -->
 
   <div class="card">
 
@@ -901,6 +1157,8 @@ main {
   </div>
 
 
+  <!-- FREE TIME -->
+
   <div class="card">
 
     <h3>
@@ -913,6 +1171,8 @@ main {
 
   </div>
 
+
+  <!-- RETURN FLIGHT -->
 
   <div class="card flight">
 
@@ -953,36 +1213,56 @@ main {
 </section>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <div class="footer">
   🌺 Hawaii Graduation Trip ・ 2026
 </div>
 
+
 </main>
 
 
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
+
 function showDay(index) {
 
   const days = document.querySelectorAll(".day");
+
   const buttons = document.querySelectorAll(".days button");
+
 
   days.forEach(day => {
     day.classList.remove("active");
   });
 
+
   buttons.forEach(button => {
     button.classList.remove("active");
   });
 
+
   days[index].classList.add("active");
+
   buttons[index].classList.add("active");
+
 
   window.scrollTo({
     top: 0,
     behavior: "smooth"
   });
+
 }
+
 </script>
 
+
 </body>
+
 </html>
