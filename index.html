@@ -519,38 +519,6 @@ main {
 
 </nav>
 
-let volcanoPlan = 0;
-
-function changeVolcanoPlan(direction) {
-
-  const slides = document.querySelectorAll(".volcano-slide");
-  const dots = document.querySelectorAll(".volcano-dot");
-  const page = document.getElementById("volcano-page");
-
-  volcanoPlan += direction;
-
-  if (volcanoPlan < 0) {
-    volcanoPlan = slides.length - 1;
-  }
-
-  if (volcanoPlan >= slides.length) {
-    volcanoPlan = 0;
-  }
-
-  slides.forEach(slide => {
-    slide.classList.remove("active");
-  });
-
-  dots.forEach(dot => {
-    dot.classList.remove("active");
-  });
-
-  slides[volcanoPlan].classList.add("active");
-  dots[volcanoPlan].classList.add("active");
-
-  page.textContent = (volcanoPlan + 1) + " / " + slides.length;
-}
-
 
 <main>
 
@@ -1776,6 +1744,38 @@ function showDay(index) {
 
 }
 
+let volcanoPlan = 0;
+
+function changeVolcanoPlan(direction) {
+
+  const slides = document.querySelectorAll(".volcano-slide");
+  const dots = document.querySelectorAll(".volcano-dot");
+  const page = document.getElementById("volcano-page");
+
+  volcanoPlan += direction;
+
+  if (volcanoPlan < 0) {
+    volcanoPlan = slides.length - 1;
+  }
+
+  if (volcanoPlan >= slides.length) {
+    volcanoPlan = 0;
+  }
+
+  slides.forEach(slide => {
+    slide.classList.remove("active");
+  });
+
+  dots.forEach(dot => {
+    dot.classList.remove("active");
+  });
+
+  slides[volcanoPlan].classList.add("active");
+  dots[volcanoPlan].classList.add("active");
+
+  page.textContent = (volcanoPlan + 1) + " / " + slides.length;
+}
+  
 </script>
 
 
