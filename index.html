@@ -1160,9 +1160,43 @@ main {
           Chain of Craters Road 海岸端的天然海蝕拱門。
         </p>
       </div>
-      </div>
+
+    <!-- CONTROLS -->
+
+    <div class="volcano-controls">
+
+      <button
+        type="button"
+        class="volcano-arrow"
+        onclick="changeVolcanoPlan(-1)"
+      >
+        ‹
+      </button>
+
+      <div class="volcano-page">
+
+        <span class="volcano-dot active"></span>
+        <span class="volcano-dot"></span>
+
+        <span id="volcano-page">
+          1 / 2
+        </span>
+
       </div>
 
+      <button
+        type="button"
+        class="volcano-arrow"
+        onclick="changeVolcanoPlan(1)"
+      >
+        ›
+      </button>
+
+    </div>
+
+  </div>
+
+  
       <h3>天氣・食物・裝備</h3>
 
   <p>
@@ -1211,41 +1245,6 @@ main {
       
     </div>
 
-
-    <!-- CONTROLS -->
-
-    <div class="volcano-controls">
-
-      <button
-        type="button"
-        class="volcano-arrow"
-        onclick="changeVolcanoPlan(-1)"
-      >
-        ‹
-      </button>
-
-      <div class="volcano-page">
-
-        <span class="volcano-dot active"></span>
-        <span class="volcano-dot"></span>
-
-        <span id="volcano-page">
-          1 / 2
-        </span>
-
-      </div>
-
-      <button
-        type="button"
-        class="volcano-arrow"
-        onclick="changeVolcanoPlan(1)"
-      >
-        ›
-      </button>
-
-    </div>
-
-  </div>
 
 </div>
 
