@@ -343,39 +343,81 @@ main {
 }
 
 /* =========================
-   VOLCANO PLAN SLIDER
+   VOLCANO PLAN
 ========================= */
 
-.volcano-slider {
-  overflow: hidden;
+.volcano-card {
+  border-left: 4px solid #ff8447;
+}
+
+.volcano-detail {
+  margin-top: 14px;
+  padding: 16px;
+  background: #0f1728;
+  border: 1px solid #263650;
+  border-radius: 14px;
 }
 
 .volcano-slide {
   display: none;
-  min-height: 330px;
 }
 
 .volcano-slide.active {
   display: block;
 }
 
+.volcano-plan-title {
+  color: #ff925c;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+
+/* 每個景點細節 */
+
+.volcano-stop {
+  padding: 11px 0;
+  border-bottom: 1px solid #263650;
+}
+
+.volcano-stop:last-of-type {
+  border-bottom: none;
+}
+
+.volcano-stop strong {
+  color: #f4f7ff;
+}
+
+.volcano-stop p {
+  margin: 5px 0 0;
+  color: #aebbd0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .volcano-controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+
+  margin-top: 16px;
   padding-top: 14px;
-  border-top: 1px solid #2b3955;
+
+  border-top: 1px solid #263650;
 }
 
 .volcano-arrow {
-  width: 46px;
-  height: 46px;
+  width: 42px;
+  height: 42px;
+
   border: none;
   border-radius: 50%;
+
   background: #202d49;
   color: white;
-  font-size: 30px;
+
+  font-size: 26px;
   cursor: pointer;
 }
 
@@ -383,17 +425,19 @@ main {
   background: #ff7b39;
 }
 
-.volcano-dots {
+.volcano-page {
   display: flex;
   align-items: center;
   gap: 7px;
+
   color: #91a2be;
   font-size: 13px;
 }
 
 .volcano-dot {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
+
   border-radius: 50%;
   background: #46546d;
 }
@@ -1010,10 +1054,11 @@ main {
 
 <!-- HAWAII VOLCANOES NATIONAL PARK -->
 
-<div class="card">
+ <!-- VOLCANO PLAN -->
 
-  <h3>
-    🌋
+<div class="card volcano-card">
+
+  <h3>🌋
     <a
       href="https://www.google.com/maps/search/?api=1&query=Hawaii+Volcanoes+National+Park"
       target="_blank"
@@ -1024,179 +1069,135 @@ main {
     </a>
   </h3>
 
-  <p>
-    安排一整天探索 Kīlauea 火山，依當天是否噴發調整行程。
-  </p>
-
-  <p class="note">
-    ⚠️ 火山活動、天氣及道路狀況變化快，當天以 USGS / NPS 官方資訊為準。
-  </p>
-
-</div>
-
-
-<!-- CHECK ERUPTION -->
-
-<div class="card">
-
-  <h3>🔎 出發前確認</h3>
 
   <p>
-    🌋 <strong>USGS Kīlauea：</strong>
-    出發前確認最新火山活動、噴發狀態及 Webcam。
+    依當天火山是否噴發選擇行程。
   </p>
 
-  <p>
-    🛣️ <strong>NPS：</strong>
-    確認當天觀景點、步道及道路是否開放。
-  </p>
+  <div class="volcano-detail">
 
-  <p class="note">
-    噴發時間無法準確預測，依當天狀況選擇 Plan A 或 Plan B。
-  </p>
+    <!-- PLAN A -->
 
-</div>
+    <div class="volcano-slide active">
 
+      <div class="volcano-plan-title">
+        🔥 Plan A｜有噴發
+      </div>
 
-<div class="card volcano-slider">
+      <div class="volcano-stop">
+        <strong>① 確認最佳觀景位置</strong>
+        <p>
+          查看 USGS / NPS 最新資訊，
+          前往當天開放的 Lava Viewing Area。
+        </p>
+      </div>
 
-  <div class="volcano-slide active">
+      <div class="volcano-stop">
+        <strong>② Lava Viewing</strong>
+        <p>
+          依當天狀況前往 Kīlauea Overlook、
+          Uēkahuna 或其他開放觀景點。
+        </p>
+      </div>
 
-    <h3>🔥 Plan A｜有噴發</h3>
+      <div class="volcano-stop">
+        <strong>③ 晚上再次看熔岩</strong>
+        <p>
+          如果晚上仍持續噴發，
+          可視情況再次前往觀賞。
+        </p>
+      </div>
 
-    <p>
-      以當天 NPS 開放的最佳 Lava Viewing Area 為主，
-      優先前往可以安全看到噴發的位置。
-    </p>
+      <p class="note">
+        ⚠️ 僅在官方開放區域觀賞，不進入封閉區域。
+        噴發期間可能有火山氣體、火山灰及較大人潮。
+      </p>
 
-    <p>
-      📍 可依 USGS / NPS 當天資訊選擇
-      Kīlauea Overlook、Uēkahuna 或其他開放觀景點。
-    </p>
-
-    <p>
-      🌙 如果晚上仍有噴發，可視情況再次前往觀賞，
-      夜間通常更容易看見熔岩亮光。
-    </p>
-
-    <p class="note">
-      ⚠️ 僅在官方開放區域觀賞，不進入封閉區域。
-      噴發期間可能有火山氣體、火山灰及較大人潮。
-    </p>
-
-  </div>
-
-
-  <div class="volcano-slide">
-
-    <h3>🌋 Plan B｜沒有噴發</h3>
-
-    <p>
-      <strong>① Kīlauea Summit</strong><br>
-      Uēkahuna → Kīlauea Overlook → Steam Vents
-    </p>
-
-    <p>
-      <strong>② Kīlauea Iki Trail</strong><br>
-      走進以前的熔岩湖火山口，依體力決定健行長度。
-    </p>
-
-    <p>
-      <strong>③ Nāhuku (Thurston Lava Tube)</strong><br>
-      天然熔岩隧道。
-    </p>
-
-    <p>
-      <strong>④ Chain of Craters Road</strong><br>
-      從火山口一路往海岸開，沿途停靠火山地形觀景點。
-    </p>
-
-    <p>
-      <strong>⑤ Hōlei Sea Arch</strong><br>
-      Chain of Craters Road 海岸端的天然海蝕拱門。
-    </p>
-
-  </div>
-
-
-  <div class="volcano-controls">
-
-    <button
-      type="button"
-      class="volcano-arrow"
-      onclick="changeVolcanoPlan(-1)"
-      aria-label="上一個方案"
-    >
-      ‹
-    </button>
-
-    <div class="volcano-dots">
-      <span class="volcano-dot active"></span>
-      <span class="volcano-dot"></span>
-      <span id="volcano-page">1 / 2</span>
     </div>
 
-    <button
-      type="button"
-      class="volcano-arrow"
-      onclick="changeVolcanoPlan(1)"
-      aria-label="下一個方案"
-    >
-      ›
-    </button>
+
+    <!-- PLAN B -->
+
+    <div class="volcano-slide">
+
+      <div class="volcano-plan-title">
+        🌿 Plan B｜沒有噴發
+      </div>
+
+      <div class="volcano-stop">
+        <strong>① Kīlauea Summit</strong>
+        <p>
+          Uēkahuna → Kīlauea Overlook → Steam Vents
+        </p>
+      </div>
+
+      <div class="volcano-stop">
+        <strong>② Kīlauea Iki Trail</strong>
+        <p>
+          走進以前的熔岩湖火山口，
+          依體力決定健行長度。
+        </p>
+      </div>
+
+      <div class="volcano-stop">
+        <strong>③ Nāhuku Lava Tube</strong>
+        <p>
+          天然熔岩隧道。
+        </p>
+      </div>
+
+      <div class="volcano-stop">
+        <strong>④ Chain of Craters Road</strong>
+        <p>
+          從火山口一路往海岸開，
+          沿途停靠不同火山地形觀景點。
+        </p>
+      </div>
+
+      <div class="volcano-stop">
+        <strong>⑤ Hōlei Sea Arch</strong>
+        <p>
+          Chain of Craters Road 海岸端的天然海蝕拱門。
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- CONTROLS -->
+
+    <div class="volcano-controls">
+
+      <button
+        type="button"
+        class="volcano-arrow"
+        onclick="changeVolcanoPlan(-1)"
+      >
+        ‹
+      </button>
+
+      <div class="volcano-page">
+
+        <span class="volcano-dot active"></span>
+        <span class="volcano-dot"></span>
+
+        <span id="volcano-page">
+          1 / 2
+        </span>
+
+      </div>
+
+      <button
+        type="button"
+        class="volcano-arrow"
+        onclick="changeVolcanoPlan(1)"
+      >
+        ›
+      </button>
+
+    </div>
 
   </div>
-
-</div>
-
-<!-- WHAT TO BRING -->
-
-<div class="card">
-
-  <h3>🎒 天氣・食物・裝備</h3>
-
-  <p>
-    🌦️ <strong>天氣：</strong>
-    火山區天氣變化快，可能突然下雨、起霧或變冷；
-    山頂區域也會比海邊明顯涼很多。
-  </p>
-
-  <p>
-    🧥 <strong>衣物：</strong>
-    帶防風防雨外套及保暖衣物；
-    如果待到晚上看火山，厚外套建議帶著。
-  </p>
-
-  <p>
-    👟 <strong>鞋子：</strong>
-    穿包覆性好的運動鞋／登山鞋，
-    火山岩地面崎嶇而且很尖銳。
-  </p>
-
-  <p>
-    🔦 <strong>夜間：</strong>
-    準備手電筒或頭燈。
-  </p>
-
-  <p>
-    💧 <strong>飲水：</strong>
-    車上準備充足飲用水。
-  </p>
-
-  <p>
-    🍙 <strong>食物：</strong>
-    進公園前先準備午餐、零食及飲料，
-    不要依賴行程途中隨時都能買到食物。
-  </p>
-
-  <p>
-    🧴 <strong>其他：</strong>
-    防曬、帽子、行動電源、簡單急救用品。
-  </p>
-
-  <p class="note">
-    📱 部分區域手機訊號不穩，建議事先下載離線地圖。
-  </p>
 
 </div>
 
